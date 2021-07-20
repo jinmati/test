@@ -1,0 +1,23 @@
+.Contact {
+  height: 666px;
+  background-image: url(../img/contact-bgi@2x.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: hidden;
+  .inner {
+    p {
+      text-align: center;
+      margin-top: 83px;
+      color: #fff;
+    }
+    .Contact-btn {
+      width: 235px;
+      height: 59px;
+      border-radius: 30px;
+      font-size: 16px;
+      margin: 80px auto 0 auto;
+      @include btn;
+    }
+  }
+}

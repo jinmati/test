@@ -1,0 +1,125 @@
+body {
+  font-family: Noto Serif;
+  font-weight: bold;
+  line-height: 1.5;
+  margin: 0;
+}
+
+@mixin btn {
+  background-color: #f7d43f;
+  display: block;
+  cursor: pointer;
+}
+
+.jp {
+  font-family: "Noto Serif JP", serif;
+}
+
+body {
+  width: 100%;
+}
+
+h2 {
+  font-size: 60px;
+  font-style: italic;
+  margin-top: 100px;
+  position: relative;
+  display: block;
+  box-sizing: border-box;
+  @include sp {
+    font-size: 30px;
+    margin-left: 0;
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    margin-left: 32px;
+    width: 200px;
+    height: 5px;
+    align-items: center;
+    background-color: #000;
+    @include sp {
+      width: 90px;
+    }
+  }
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.inner {
+  width: 1200px;
+  max-width: 83%;
+  margin: 0 auto;
+  @include sp {
+    width: 345px;
+    max-width: 92%;
+  }
+}
+
+.br-pc {
+  @include sp {
+    display: none;
+  }
+}
+
+.br-sp {
+  display: none;
+  @include sp {
+    display: block;
+  }
+}
+
+section {
+  position: relative;
+}
+
+.foot {
+  color: #4c4d4f;
+  display: inline-block;
+  position: absolute;
+  bottom: 70px;
+  @include clamp(70px, 90px);
+  @include sp {
+    font-size: 40px;
+    bottom: 40px;
+  }
+}
+
+.wh {
+  color: #fff;
+  margin-left: auto;
+  text-align: right;
+  padding-right: 248px;
+  @include sp {
+    padding-right: 130px;
+  }
+  &::after {
+    content: "";
+    background-color: #fff;
+  }
+}
+
+.ri {
+  color: #f3f3f3;
+  right: 0;
+}
+
+footer {
+  height: 79px;
+  font-size: 14px;
+  text-align: center;
+  p {
+    // height: 100%;
+    line-height: 79px;
+    display: inline-block;
+    vertical-align: text-bottom;
+  }
+}

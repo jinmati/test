@@ -1,0 +1,61 @@
+header {
+  width: 100%;
+  position: fixed;
+  z-index: 100;
+  font-style: italic;
+  padding: 19px 0;
+  @include sp {
+    padding: 30px 0;
+  }
+  .inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 36px;
+    color: #fff;
+    h1 {
+      margin: 0;
+      font-size: 26px;
+      @include res(700px) {
+        font-size: vw(700px, 26px);
+      }
+      @include sp {
+        font-size: 26px;
+      }
+    }
+    nav {
+      @include sp {
+        width: 48px;
+      }
+    }
+
+    .menu {
+      display: flex;
+      justify-content: flex-end;
+      list-style: none;
+      font-size: 16px;
+      padding-left: 0px;
+      @include sp {
+        display: none;
+      }
+      li {
+        margin-left: 30px;
+        @include res(750px) {
+          margin-left: 15px;
+        }
+      }
+    }
+    button,
+    .p-drawer {
+      display: none;
+      @include sp {
+        display: block;
+      }
+    }
+  }
+}
+
+.header-color {
+  background-color: #282f35;
+  padding: 30px 0;
+}

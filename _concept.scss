@@ -1,0 +1,71 @@
+.concept {
+  height: 909px;
+  overflow: hidden;
+  @include sp {
+    height: 799px;
+  }
+  .inner {
+    height: 809px;
+    position: relative;
+    @include sp {
+      height: 699px;
+    }
+    .heading {
+      display: inline-block;
+      text-align: center;
+      @include clamp(25px, 30px);
+      width: 100%;
+      margin: 70px auto 0;
+      @include sp {
+        margin-top: 52px;
+        width: 100%;
+        font-size: 20px;
+      }
+      @include res(370px) {
+        font-size: vw(360, 20);
+      }
+    }
+    .content {
+      display: block;
+      font-size: 16px;
+      width: vw(1440, 440);
+      height: 146px;
+      position: absolute;
+      // top: 454px;
+      left: 100px;
+      margin-top: 107px;
+      @include res(1250px) {
+        height: fit-content;
+        width: 90%;
+        position: static;
+        margin: 30px auto 0 auto;
+      }
+      @include sp {
+        width: 100%;
+      }
+    }
+    img {
+      display: block;
+      position: absolute;
+      margin-top: 60px;
+      right: 100px;
+      width: 440px;
+      height: 240px;
+      @include res(1250px) {
+        position: static;
+        margin: 30px auto 0 auto;
+      }
+
+      @include sp {
+        margin-top: 60px;
+        height: 150px;
+        width: 100%;
+      }
+    }
+    .foot {
+      @include sp {
+        margin-top: 40px;
+      }
+    }
+  }
+}

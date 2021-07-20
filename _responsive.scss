@@ -1,0 +1,20 @@
+@function vw($width, $px) {
+  @return $px / $width * 100vw;
+}
+
+// spサイズ
+@mixin sp {
+  @media (max-width: (599px)) {
+    @content;
+  }
+}
+
+@mixin res($width) {
+  @media (max-width: ($width)) {
+    @content;
+  }
+}
+
+@mixin clamp($s, $b) {
+  font-size: clamp($s, vw(1200px, $b), $b);
+}
